@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multas </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Dispositivo</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Fecha de entrega</th>
+                <th>Multa</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in datos%}
+            <tr>
+                
+                <td>{{item.Usuario}}</td>
+                <td>{{item.Dispositivo}}</td>
+                <td>{{item.Fecha_inicio}}</td>
+                <td>{{item.Fecha_fin}}</td>
+                <td>{{item.Fecha_entrega}}</td>
+                <td>{{item.Multa}}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+                    
+                   
+                    
+        
+    </table>
+    
+</body>
+</html>
